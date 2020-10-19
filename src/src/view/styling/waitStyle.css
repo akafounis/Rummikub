@@ -1,0 +1,43 @@
+.buttonArea {
+  -fx-alignment: CENTER;
+  -fx-spacing: 10;
+}
+
+.onEdge {
+  -fx-padding: 20;
+}
+
+.shadow {
+  -fx-effect: dropshadow(gaussian, #00000066, 20, 0.1, 0, 0);
+  -fx-background-radius: 5;
+}
+
+#content {
+  -fx-spacing: 15;
+
+  -fx-max-height: 200;
+  -fx-max-width: 600;
+
+  -fx-border-color: white;
+  -fx-border-radius: 5;
+  -fx-background-color: #095F94;
+  -fx-padding: 20;
+}
+
+#ipArea {
+  -fx-padding: 10 0;
+}
+
+#opponentList {
+  -fx-padding: 10;
+}
+
+#root {
+  -fx-background-image: url("../images/backgroundTileBlue.png");
+  -fx-background-repeat: repeat;
+}
+
+#waitingState {
+  -fx-font-size: 32;
+  -fx-font-weight: 700;
+}

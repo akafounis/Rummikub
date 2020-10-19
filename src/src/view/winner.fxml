@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="root"
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="view.WinnerController"
+           stylesheets="@/view/styling/style.css, @/view/styling/winnerStyle.css">
+
+  <!-- Content in center -->
+  <StackPane fx:id="vContainer">
+
+    <!-- Title -->
+    <StackPane alignment="TOP_CENTER">
+      <Text fx:id="title" styleClass="whiteText, shadow" text="Rummikub"/>
+    </StackPane>
+
+    <!-- Rank list -->
+    <VBox fx:id="content" alignment="CENTER_LEFT" spacing="10" styleClass="shadow">
+      <Text text="We have a winner!" styleClass="whiteText, subHeader"/>
+      <Text fx:id="rankList" styleClass="whiteText"/>
+      <VBox alignment="CENTER" spacing="10">
+        <Text text="And what's next?" styleClass="whiteText" />
+        <HBox alignment="CENTER" spacing="10">
+          <Button onMouseClicked="#restartGame" text="Play again"/>
+          <Button onMouseClicked="#goBackToLobby" text="Back to lobby"/>
+        </HBox>
+      </VBox>
+    </VBox>
+  </StackPane>
+</StackPane>

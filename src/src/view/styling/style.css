@@ -1,0 +1,55 @@
+/* Tag selectors */
+
+Button {
+  -fx-background-color: white;
+  -fx-text-fill: #095D91;
+  -fx-font-size: 18;
+  -fx-font-weight: 700;
+  -fx-border-radius: 3;
+  -fx-background-radius: 3;
+  -fx-effect: dropshadow(gaussian, #00000033, 20, 0.1, 0, 0);
+}
+
+Button:hover {
+  -fx-background-color: #A3CDE2;
+}
+
+Button:pressed {
+  -fx-background-color: #095D91;
+  -fx-text-fill: white;
+}
+
+Text {
+  -fx-font-family: Helvetica, Arial, SansSerif;
+}
+
+.onEdge {
+  -fx-padding: 20;
+}
+
+.shadow {
+  -fx-effect: dropshadow(gaussian, #00000066, 20, 0.1, 0, 0);
+}
+
+.subheadline {
+  -fx-font-size: 24;
+}
+
+.whiteText {
+  -fx-fill: white;
+  -fx-font-weight: 700;
+}
+
+#root {
+  -fx-background-image: url("../images/backgroundTileBlue.png");
+  -fx-background-repeat: repeat;
+}
+
+#title {
+  -fx-font-size: 80;
+  -fx-font-weight: 700;
+}
+
+#vContainer {
+  -fx-max-width: 600;
+}

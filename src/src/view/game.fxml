@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.GameController"
+      stylesheets="@/view/styling/style.css, @/view/styling/gameStyle.css"
+      alignment="TOP_CENTER" pickOnBounds="false">
+
+  <!-- Top area: Timer and menu buttons -->
+  <StackPane fx:id="top" alignment="TOP_CENTER" pickOnBounds="false">
+    <!-- timer -->
+    <StackPane alignment="TOP_LEFT" styleClass="onEdge"
+               pickOnBounds="false">
+      <HBox alignment="CENTER_LEFT" spacing="15" pickOnBounds="false">
+        <Text fx:id="timerDescription" text="Timer:" styleClass="whiteText"/>
+        <Text fx:id="timer" text="60"/>
+      </HBox>
+    </StackPane>
+
+    <!-- Mid opponent's hand -->
+    <HBox fx:id="opponentMid" styleClass="hand, opponentHand, shadow"
+          pickOnBounds="false">
+      <Text fx:id="midPlayerName" styleClass="whiteText"
+            text="x"/>
+      <Text fx:id="midPlayerHand" styleClass="whiteText"
+            text="x"/>
+    </HBox>
+
+    <!-- Menu buttons -->
+    <HBox alignment="TOP_RIGHT" styleClass="onEdge" spacing="10"
+          pickOnBounds="false">
+      <Button fx:id="helpButton" text="?"
+              onMouseClicked="#showHelpScene"/>
+      <Button fx:id="quitGame" text="Quit" onMouseClicked="#quitGame"/>
+    </HBox>
+  </StackPane>
+
+  <StackPane>
+    <!-- Left area: left opponent's hand -->
+    <StackPane fx:id="leftContainer" alignment="CENTER_LEFT"
+               pickOnBounds="false">
+      <!-- left opponent's hand -->
+      <HBox fx:id="opponentLeft" styleClass="hand, opponentHand, shadow"
+            pickOnBounds="false">
+        <Text fx:id="leftPlayerName" styleClass="whiteText"
+              text="x"/>
+        <Text fx:id="leftPlayerHand" styleClass="whiteText" text="x"/>
+      </HBox>
+    </StackPane>
+
+    <!-- Right area: right opponent's hand -->
+    <StackPane fx:id="rightContainer" alignment="CENTER_RIGHT"
+               pickOnBounds="false">
+      <!-- right opponent's hand -->
+      <HBox fx:id="opponentRight" styleClass="hand, opponentHand, shadow"
+            pickOnBounds="false">
+        <Text fx:id="rightPlayerName" styleClass="whiteText" text="x"/>
+        <Text fx:id="rightPlayerHand" styleClass="whiteText" text="x"/>
+      </HBox>
+    </StackPane>
+
+    <!-- Central area: table -->
+    <StackPane fx:id="tableContainer" alignment="CENTER"
+               pickOnBounds="false">
+      <GridPane fx:id="tableGrid" alignment="CENTER" pickOnBounds="false">
+        <children>
+          <!-- Container for JavaFX generated cells -->
+        </children>
+      </GridPane>
+    </StackPane>
+  </StackPane>
+
+  <!-- Bottom area: ownHand, drawStone button etc. -->
+  <StackPane fx:id="bottom" alignment="BOTTOM_CENTER" pickOnBounds="false">
+    <VBox alignment="BOTTOM_RIGHT" styleClass="onEdge" spacing="25"
+          pickOnBounds="false">
+      <!-- drawStone buttons etc. -->
+      <HBox fx:id="moveButtons" alignment="CENTER_RIGHT" spacing="10"
+            pickOnBounds="false">
+        <Button fx:id="drawButton" text="Draw stone"
+                onMouseClicked="#drawStone"/>
+        <Text text="or" styleClass="whiteText"/>
+        <Button fx:id="checkButton" text="Check"
+                onMouseClicked="#sendConfirmMoveRequest"/>
+      </HBox>
+    </VBox>
+    <VBox alignment="BOTTOM_LEFT" styleClass="onEdge" pickOnBounds="false">
+      <HBox fx:id="backButtons" alignment="CENTER_LEFT" spacing="10"
+            pickOnBounds="false">
+        <Text text="Undo: " styleClass="whiteText"/>
+        <Button fx:id="undoButton" text="Last step"
+                onMouseClicked="#sendUndoRequest"/>
+        <Button fx:id="resetButton" text="All steps"
+                onMouseClicked="#sendResetRequest"/>
+      </HBox>
+    </VBox>
+
+    <VBox fx:id="ownBoard" alignment="TOP_CENTER" styleClass="shadow"
+          pickOnBounds="false">
+      <StackPane styleClass="onEdge">
+        <HBox pickOnBounds="false">
+          <Text fx:id="ownName" styleClass="whiteText" text="You: "/>
+          <Text fx:id="ownHand" styleClass="whiteText" text="x"/>
+        </HBox>
+
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+          <Text text="Sort by:" styleClass="whiteText"/>
+          <Button fx:id="sortHandByGroupButton" text="Group"
+                  onMouseClicked="#sendSortHandByGroupRequest"/>
+          <Button fx:id="sortHandByRunButton" text="Run"
+                  onMouseClicked="#sendSortHandByRunRequest"/>
+        </HBox>
+      </StackPane>
+      <!-- hand of executing player -->
+      <GridPane fx:id="handGrid" styleClass="hand, onEdge"
+                alignment="CENTER" pickOnBounds="false">
+        <!-- Own hand -->
+        <children>
+        </children>
+      </GridPane>
+    </VBox>
+  </StackPane>
+</VBox>

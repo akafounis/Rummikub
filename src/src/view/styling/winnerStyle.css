@@ -1,0 +1,20 @@
+.subHeader {
+  -fx-font-size: 32;
+  -fx-font-weight: 700;
+}
+
+#content {
+  -fx-spacing: 15;
+
+  -fx-max-height: 200;
+  -fx-max-width: 600;
+
+  -fx-border-color: white;
+  -fx-border-radius: 5;
+  -fx-background-color: #095F94;
+  -fx-padding: 20;
+}
+
+#rankList {
+  -fx-font-size: 24;
+}

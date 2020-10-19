@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="root"
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="view.StartController"
+           stylesheets="@/view/styling/style.css, @/view/styling/startStyle.css">
+  <StackPane>
+    <HBox alignment="TOP_RIGHT" styleClass="onEdge">
+      <Button fx:id="helpButton" onMouseClicked="#showHelpScene" text="?"/>
+    </HBox>
+  </StackPane>
+  <StackPane fx:id="vContainer">
+    <!-- Title -->
+    <StackPane alignment="TOP_CENTER">
+      <Text fx:id="title" styleClass="whiteText, shadow" text="Rummikub"/>
+    </StackPane>
+
+    <!-- Form -->
+    <VBox fx:id="content" styleClass="shadow"
+          pickOnBounds="false">
+      <Text styleClass="whiteText, subheadline"
+            text="Welcome! Create your profile here:"/>
+
+      <VBox styleClass="relatedContent">
+        <VBox styleClass="inputArea">
+          <Text text="Name:" styleClass="whiteText"/>
+          <TextField fx:id="nameField"/>
+          <Text fx:id="nameError" styleClass="errorText"
+                text="Please choose an user name with up to 20 letters."
+                visible="false"/>
+        </VBox>
+
+        <VBox styleClass="inputArea">
+          <Text text="Age:" styleClass="whiteText"/>
+          <TextField fx:id="ageField"/>
+          <Text fx:id="ageError" styleClass="errorText"
+                text="You have to be 6 to 150 years old to play this game."
+                visible="false"/>
+        </VBox>
+      </VBox>
+
+      <StackPane>
+        <StackPane alignment="CENTER_LEFT">
+          <Text styleClass="whiteText, subheadline"
+                text="Network mode:"/>
+        </StackPane>
+        <StackPane>
+          <HBox styleClass="buttonArea">
+            <Button text="Host" onMouseClicked="#hostGame"/>
+            <Text text="or" styleClass="whiteText"/>
+          </HBox>
+        </StackPane>
+      </StackPane>
+
+      <VBox styleClass="relatedContent">
+        <VBox styleClass="inputArea">
+          <Text text="IP address:" styleClass="whiteText"/>
+          <TextField fx:id="ipField" promptText="localhost"/>
+          <Text fx:id="ipError" styleClass="errorText"
+                text="No Server Found With This IP Address!" visible="false"/>
+        </VBox>
+        <HBox styleClass="buttonArea">
+          <Button text="Join" onMouseClicked="#joinGame"/>
+        </HBox>
+      </VBox>
+    </VBox>
+
+    <!-- Footer -->
+    <StackPane alignment="BOTTOM_CENTER" styleClass="onEdge"
+               pickOnBounds="false">
+      <Text text="brought to you by the Curry Gang"
+            styleClass="whiteText, subheadline, shadow"/>
+    </StackPane>
+  </StackPane>
+</StackPane>

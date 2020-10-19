@@ -1,0 +1,172 @@
+/* Class selectors */
+
+.cell {
+    -fx-border-color: white;
+    -fx-fill: none;
+    -fx-alignment: CENTER;
+    -fx-max-height: 55;
+    -fx-pref-height: 55;
+    -fx-min-height: 55;
+    -fx-max-width: 40;
+    -fx-pref-width: 40;
+    -fx-min-width: 40;
+    }
+
+.centered {
+    -fx-alignment: CENTER;
+}
+
+.hand {
+    -fx-background-color: black;
+    -fx-border-radius: 0 0 10 10;
+    -fx-background-radius: 0 0 10 10;
+}
+
+.section {
+  -fx-max-height: 300;
+  -fx-pref-height: 300;
+  -fx-min-height: 300;
+}
+
+.shadow {
+    -fx-effect: dropshadow(gaussian, #00000066, 20, 0.1, 0, 0);
+}
+
+.stoneValue {
+  -fx-translate-y: -6;
+  -fx-font-weight: 700;
+}
+
+.whiteText {
+  -fx-fill: white;
+  -fx-text-fill: white;
+  -fx-font-size: 20;
+  -fx-font-weight: 700;
+}
+
+.RED {
+    -fx-fill: #e8320f;
+    -fx-stroke: #e8320f;
+}
+
+.YELLOW {
+    -fx-fill: #d0df16;
+    -fx-stroke: #8d850d;
+}
+
+.BLUE {
+    -fx-fill: #3e56ff;
+    -fx-stroke: #3e56ff;
+}
+
+.BLACK {
+    -fx-fill: black;
+    -fx-stroke: black;
+}
+
+.JOKER {
+    -fx-fill: white;
+    -fx-stroke: white;
+}
+
+.jokerBackground {
+    -fx-translate-y: -6;
+    -fx-fill: #10950e;
+}
+
+.stoneValue {
+    -fx-font-weight: 700;
+}
+
+.opponentHand {
+    -fx-max-width: 600;
+    -fx-pref-width: 600;
+    -fx-min-width: 600;
+    -fx-max-height: 60;
+    -fx-pref-height: 60;
+    -fx-min-height: 60;
+    -fx-alignment: CENTER;
+    -fx-padding: 10;
+}
+
+
+/* ID selectors */
+
+#bottom {
+    -fx-translate-y: -15;
+}
+
+#errorPane {
+    -fx-alignment: CENTER;
+}
+
+#handGrid {
+    -fx-padding: 0 20;
+}
+
+#leftContainer {
+    -fx-padding: 0 0 0 -270;
+}
+
+#opponentLeft {
+    -fx-rotate: -90;
+}
+
+#opponentRight {
+    -fx-rotate: 90;
+}
+
+#ownBoard {
+    -fx-padding: 0 0 20 0;
+    -fx-background-color: black;
+    -fx-max-width: 10; /* width dynamically increased */
+    -fx-max-height: 10; /* height dynamically increased */
+    -fx-border-radius: 10 10 0 0;
+    -fx-background-radius: 10 10 0 0;
+    -fx-border-color: black;
+    -fx-border-width: 10 10 0 10;
+}
+
+#ownName, #ownHand {
+    -fx-font-size: 28;
+}
+
+#rightContainer {
+    -fx-padding: 0 -270 0 0;
+}
+
+#root {
+    -fx-background-image: url("../images/backgroundTileBlue.png");
+    -fx-background-repeat: repeat;
+}
+
+#table {
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-max-width: 100; /* width dynamically increased by cells */
+}
+
+#tableContainer {
+    -fx-padding: 50;
+}
+
+#tableGrid {
+    -fx-translate-y: -25;
+}
+
+#timer {
+    -fx-font-size: 40;
+    -fx-fill: white;
+    -fx-font-weight: 700;
+}
+
+#timerDescription {
+    -fx-font-size: 24;
+    -fx-fill: white;
+}
+
+#top {
+  -fx-max-height: 100;
+  -fx-pref-height: 100;
+  -fx-min-height: 100;
+}

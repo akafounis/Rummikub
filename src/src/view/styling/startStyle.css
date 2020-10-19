@@ -1,0 +1,29 @@
+.buttonArea {
+    -fx-alignment: CENTER;
+    -fx-spacing: 10;
+}
+
+.errorText {
+    -fx-background-color: #ff0022;
+}
+
+.inputArea {
+    -fx-spacing: 5;
+}
+
+.relatedContent {
+    -fx-spacing: 5;
+}
+
+#content {
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 20;
+    -fx-max-height: 400;
+    -fx-max-width: 600;
+
+    -fx-border-color: white;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #095F94;
+    -fx-padding: 20;
+}

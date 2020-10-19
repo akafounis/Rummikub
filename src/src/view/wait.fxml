@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+
+<StackPane fx:id="root"
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="view.WaitController"
+           stylesheets="@/view/styling/style.css, @/view/styling/waitStyle.css">
+
+  <!-- Buttons in top right corner -->
+  <StackPane alignment="TOP_RIGHT" pickOnBounds="false">
+    <HBox alignment="TOP_RIGHT" spacing="5" styleClass="onEdge">
+      <StackPane alignment="TOP_RIGHT">
+        <Button fx:id="notMuteButton" onMouseClicked="#unMute"
+                visible="false" text="Unmute"/>
+        <Button fx:id="muteButton" onMouseClicked="#mute" visible="true"
+                text="Mute"/>
+      </StackPane>
+      <Button onMouseClicked="#quitWaiting" text="Quit"/>
+    </HBox>
+  </StackPane>
+
+  <!-- Content in center -->
+  <StackPane fx:id="vContainer">
+
+    <!-- Title -->
+    <StackPane alignment="TOP_CENTER">
+      <Text fx:id="title" styleClass="whiteText, shadow" text="Rummikub"/>
+    </StackPane>
+
+    <!-- Opponent list-->
+    <VBox fx:id="content" alignment="CENTER_LEFT" styleClass="shadow">
+      <Text fx:id="waitingState" text="Waiting for opponents..."
+            styleClass="whiteText"/>
+      <VBox fx:id="opponentList" spacing="5">
+        <HBox alignment="CENTER_LEFT">
+          <Text styleClass="whiteText" text="• Player 1: "/>
+          <Text styleClass="whiteText" fx:id="player0" text="?"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT">
+          <Text styleClass="whiteText" text="• Player 2: "/>
+          <Text styleClass="whiteText" fx:id="player1" text="?"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT">
+          <Text styleClass="whiteText" text="• Player 3: "/>
+          <Text styleClass="whiteText" fx:id="player2" text="?"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT">
+          <Text styleClass="whiteText" text="• Player 4: "/>
+          <Text styleClass="whiteText" fx:id="player3" text="?"/>
+        </HBox>
+      </VBox>
+
+      <HBox fx:id="ipArea" alignment="CENTER_LEFT">
+        <Text text="IP address to join: " styleClass="subheadline, whiteText"/>
+        <Text fx:id="ipAddress" styleClass="subheadline, whiteText"/>
+      </HBox>
+
+      <HBox styleClass="buttonArea">
+        <Button fx:id="startGameButton" onMouseClicked="#startGame"
+                text="StartGame"/>
+      </HBox>
+    </VBox>
+  </StackPane>
+</StackPane>
